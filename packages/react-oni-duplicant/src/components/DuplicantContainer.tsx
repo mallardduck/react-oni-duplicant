@@ -7,19 +7,19 @@ const styles: any = {
     position: "relative",
     "& .duplicant-hair": {
       position: "absolute",
-      left: 0,
-      top: 0
+      left: 50,
+      top: 50
     },
     "& .duplicant-head": {
       position: "absolute",
-      left: 0,
-      top: 10,
+      left: 50,
+      top: 60,
       zIndex: -1
     },
     "& .duplicant-eyes": {
       position: "absolute",
-      left: 20,
-      top: 36,
+      left: 70,
+      top: 86,
       zIndex: -1
     }
   }
