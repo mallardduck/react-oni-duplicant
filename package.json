@@ -1,0 +1,22 @@
+{
+  "name": "react-oni-duplicant",
+  "version": "1.0.0",
+  "description": "A react component for rendering Oxygen Not Included duplicants.",
+  "main": "index.js",
+  "scripts": {
+    "lerna": "lerna"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoboPhred/react-oni-duplicant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoboPhred/react-oni-duplicant/issues"
+  },
+  "homepage": "https://github.com/RoboPhred/react-oni-duplicant#readme",
+  "devDependencies": {
+    "lerna": "^3.8.0"
+  }
+}
