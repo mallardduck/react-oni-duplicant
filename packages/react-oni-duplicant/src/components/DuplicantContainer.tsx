@@ -20,7 +20,7 @@ const styles: any = {
     "& .duplicant-eyes": {
       position: "absolute",
       left: 10,
-      top: -75,
+      top: -80,
       transform: "rotate(-12deg)"
     },
     "& .duplicant-body": {
