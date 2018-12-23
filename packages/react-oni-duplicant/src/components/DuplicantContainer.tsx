@@ -8,14 +8,12 @@ const styles: any = {
     "& .duplicant-hair": {
       position: "absolute",
       left: 7,
-      top: -120,
-      zIndex: 1
+      top: -120
     },
     "& .duplicant-head": {
       position: "absolute",
       left: 0,
-      top: 0,
-      zIndex: -1
+      top: 0
     },
     "& .duplicant-eyes": {
       position: "absolute",
@@ -26,8 +24,7 @@ const styles: any = {
     "& .duplicant-body": {
       position: "absolute",
       left: 0,
-      top: 95,
-      zIndex: -2
+      top: 95
     }
   },
   testDot: {
