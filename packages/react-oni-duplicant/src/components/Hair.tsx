@@ -4,7 +4,7 @@ import classnames from "classnames";
 
 import { DuplicantDirection } from "../types";
 
-import { requireHair, hairOrigin } from "../assets/hair";
+import { requireHair, getHairFrame } from "../assets/hair";
 
 export interface HairProps {
   className?: string;
@@ -17,10 +17,15 @@ const Hair: React.SFC<HairProps> = ({
   ordinal,
   direction = DuplicantDirection.Forward
 }) => {
-  const origin = hairOrigin(ordinal, direction);
+  const frame = getHairFrame(ordinal, direction);
   return (
     <img
-      style={{ marginLeft: -origin.x, marginTop: -origin.y }}
+      style={{
+        marginLeft: frame ? -frame.width / 2 + frame.origin.x : 0,
+        marginTop: frame ? -frame.height / 2 + frame.origin.y : 0,
+        width: frame ? frame.width : 0,
+        height: frame ? frame.height : 0
+      }}
       className={classnames(className, "duplicant-hair")}
       src={requireHair(ordinal, direction)}
     />

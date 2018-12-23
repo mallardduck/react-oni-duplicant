@@ -4,20 +4,20 @@ import classnames from "classnames";
 
 import { DuplicantDirection } from "../types";
 
-import { requireHead, getHeadFrame } from "../assets/headshape";
+import { requireBody, getBodyFrame } from "../assets/body";
 
-export interface HeadProps {
+export interface BodyProps {
   className?: string;
   ordinal: number;
   direction?: DuplicantDirection;
 }
 
-const Head: React.SFC<HeadProps> = ({
+const Body: React.SFC<BodyProps> = ({
   className,
   ordinal,
   direction = DuplicantDirection.Forward
 }) => {
-  const frame = getHeadFrame(ordinal, direction);
+  const frame = getBodyFrame(ordinal, direction);
   return (
     <img
       style={{
@@ -26,9 +26,9 @@ const Head: React.SFC<HeadProps> = ({
         width: frame ? frame.width : 0,
         height: frame ? frame.height : 0
       }}
-      className={classnames(className, "duplicant-head")}
-      src={requireHead(ordinal, direction)}
+      className={classnames(className, "duplicant-body")}
+      src={requireBody(ordinal, direction)}
     />
   );
 };
-export default Head;
+export default Body;

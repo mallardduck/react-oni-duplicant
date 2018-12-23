@@ -82,9 +82,11 @@ module.exports = {
   ].filter(truthy),
 
   devServer: {
-    // Tell the dev server to return the entrypoint for any
-    //  sub-path, since we use url routes.
-    historyApiFallback: true
+    // Something unique about this install is causing
+    //  webpack to never receive the Origin header,
+    //  although the browser is sending it.
+    // TODO: Figure out WTF.
+    disableHostCheck: true
   }
 };
 

@@ -1,13 +1,20 @@
 import * as React from "react";
 import { render } from "react-dom";
 
-import { DuplicantContainer, Hair, Head, Eyes } from "react-oni-duplicant";
+import {
+  DuplicantContainer,
+  Hair,
+  Head,
+  Eyes,
+  Body
+} from "react-oni-duplicant";
 
 type Props = {};
 interface State {
   hair: number;
   head: number;
   eyes: number;
+  body: number;
 }
 class Root extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -15,19 +22,23 @@ class Root extends React.Component<Props, State> {
     this.state = {
       hair: 1,
       head: 1,
-      eyes: 1
+      eyes: 1,
+      body: 1
     };
   }
 
   render() {
-    const { hair, head, eyes } = this.state;
+    const { hair, head, eyes, body } = this.state;
     return (
       <div>
-        <DuplicantContainer>
-          <Hair ordinal={hair} />
-          <Head ordinal={head} />
-          <Eyes ordinal={eyes} />
-        </DuplicantContainer>
+        <div style={{ height: "300px", paddingLeft: 200, paddingTop: 200 }}>
+          <DuplicantContainer>
+            <Hair ordinal={hair} />
+            <Head ordinal={head} />
+            <Eyes ordinal={eyes} />
+            <Body ordinal={body} />
+          </DuplicantContainer>
+        </div>
         <input
           type="number"
           value={hair}
@@ -42,6 +53,11 @@ class Root extends React.Component<Props, State> {
           type="number"
           value={eyes}
           onChange={e => this.setState({ eyes: e.target.valueAsNumber })}
+        />
+        <input
+          type="number"
+          value={body}
+          onChange={e => this.setState({ body: e.target.valueAsNumber })}
         />
       </div>
     );

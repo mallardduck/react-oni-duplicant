@@ -3,15 +3,15 @@ import { DuplicantDirection } from "../types";
 import { pad } from "../utils";
 import { getSymbolFrame, KAnimBuildSymbolFrame } from "./build";
 
-import swapBuild from "./_head_swap_build";
+import bodySwap from "./_body_swap_build";
 
-const hairContext = require.context(
-  "../../assets/duplicant/hair",
+const bodyContext = require.context(
+  "../../assets/duplicant/body",
   true,
   /\.png$/
 );
 
-export function requireHair(ordinal: number, direction: DuplicantDirection) {
+export function requireBody(ordinal: number, direction: DuplicantDirection) {
   let frame;
   switch (direction) {
     default:
@@ -24,11 +24,11 @@ export function requireHair(ordinal: number, direction: DuplicantDirection) {
       frame = "2";
       break;
   }
-  const path = `./hair_${pad(ordinal, 3)}/hair_${pad(ordinal, 3)}_${frame}.png`;
-  return hairContext(path);
+  const path = `./body_${pad(ordinal, 3)}/body_${pad(ordinal, 3)}_${frame}.png`;
+  return bodyContext(path);
 }
 
-export function getHairFrame(
+export function getBodyFrame(
   ordinal: number,
   direction: DuplicantDirection
 ): KAnimBuildSymbolFrame | null {
@@ -45,6 +45,6 @@ export function getHairFrame(
       break;
   }
 
-  const frame = getSymbolFrame(`hair_${pad(ordinal, 3)}`, frameNum, swapBuild);
+  const frame = getSymbolFrame(`body_${pad(ordinal, 3)}`, frameNum, bodySwap);
   return frame;
 }
