@@ -26,23 +26,11 @@ const styles: any = {
       left: 0,
       top: 95
     }
-  },
-  testDot: {
-    position: "absolute",
-    left: -2,
-    top: -2,
-    height: 4,
-    width: 4,
-    backgroundColor: "red",
-    borderRadius: "50%"
   }
 };
 
 type Props = StyleProps<typeof styles>;
 const DuplicantContainer: React.SFC<Props> = ({ classes, children }) => (
-  <div className={classes.root}>
-    {children}
-    <div className={classes.testDot} />
-  </div>
+  <div className={classes.root}>{children}</div>
 );
 export default injectSheet(styles)(DuplicantContainer);
