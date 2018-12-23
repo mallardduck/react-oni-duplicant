@@ -15,23 +15,7 @@ export function requireEyes(ordinal: number) {
   return eyesContext(path);
 }
 
-export function getEyeFrame(
-  ordinal: number,
-  direction: DuplicantDirection
-): KAnimBuildSymbolFrame | null {
-  let frameNum: number;
-  switch (direction) {
-    default:
-      frameNum = 0;
-      break;
-    case DuplicantDirection.Away:
-      frameNum = 1;
-      break;
-    case DuplicantDirection.Right:
-      frameNum = 2;
-      break;
-  }
-
-  const frame = getSymbolFrame(`eyes_${pad(ordinal, 3)}`, frameNum, swapBuild);
+export function getEyeFrame(ordinal: number): KAnimBuildSymbolFrame | null {
+  const frame = getSymbolFrame(`eyes_${pad(ordinal, 3)}`, 0, swapBuild);
   return frame;
 }

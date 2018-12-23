@@ -9,15 +9,10 @@ import { requireBody, getBodyFrame } from "../assets/body";
 export interface BodyProps {
   className?: string;
   ordinal: number;
-  direction?: DuplicantDirection;
 }
 
-const Body: React.SFC<BodyProps> = ({
-  className,
-  ordinal,
-  direction = DuplicantDirection.Forward
-}) => {
-  const frame = getBodyFrame(ordinal, direction);
+const Body: React.SFC<BodyProps> = ({ className, ordinal }) => {
+  const frame = getBodyFrame(ordinal);
   return (
     <img
       style={{

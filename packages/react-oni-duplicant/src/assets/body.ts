@@ -28,23 +28,7 @@ export function requireBody(ordinal: number, direction: DuplicantDirection) {
   return bodyContext(path);
 }
 
-export function getBodyFrame(
-  ordinal: number,
-  direction: DuplicantDirection
-): KAnimBuildSymbolFrame | null {
-  let frameNum: number;
-  switch (direction) {
-    default:
-      frameNum = 0;
-      break;
-    case DuplicantDirection.Away:
-      frameNum = 1;
-      break;
-    case DuplicantDirection.Right:
-      frameNum = 2;
-      break;
-  }
-
-  const frame = getSymbolFrame(`body_${pad(ordinal, 3)}`, frameNum, bodySwap);
+export function getBodyFrame(ordinal: number): KAnimBuildSymbolFrame | null {
+  const frame = getSymbolFrame(`body_${pad(ordinal, 3)}`, 0, bodySwap);
   return frame;
 }

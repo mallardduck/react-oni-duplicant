@@ -11,12 +11,8 @@ export interface EyesProps {
   ordinal: number;
 }
 
-const Eyes: React.SFC<EyesProps> = ({
-  className,
-  ordinal
-  // direction = DuplicantDirection.Forward
-}) => {
-  const frame = getEyeFrame(ordinal, DuplicantDirection.Forward);
+const Eyes: React.SFC<EyesProps> = ({ className, ordinal }) => {
+  const frame = getEyeFrame(ordinal);
   return (
     <img
       style={{
