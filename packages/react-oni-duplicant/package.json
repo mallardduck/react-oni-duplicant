@@ -1,6 +1,6 @@
 {
   "name": "react-oni-duplicant",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A react component for rendering Oxygen Not Included duplicants.",
   "main": "dist/index.js",
   "types": "dts/index.d.ts",
