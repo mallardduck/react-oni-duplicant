@@ -2,8 +2,6 @@ import * as React from "react";
 
 import classnames from "classnames";
 
-import { DuplicantDirection } from "../types";
-
 import { requireBody, getBodyFrame } from "../assets/body";
 
 export interface BodyProps {

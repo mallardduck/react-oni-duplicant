@@ -1,5 +1,4 @@
 import { pad } from "../utils";
-import { DuplicantDirection } from "../types";
 import { KAnimBuildSymbolFrame, getSymbolFrame } from "./build";
 
 import swapBuild from "./_head_swap_build";

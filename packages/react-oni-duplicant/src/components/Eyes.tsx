@@ -3,11 +3,9 @@ import * as React from "react";
 import classnames from "classnames";
 
 import { requireEyes, getEyeFrame } from "../assets/eyes";
-import { DuplicantDirection } from "../types";
 
 export interface EyesProps {
   className?: string;
-  // direction?: DuplicantDirection;
   ordinal: number;
 }
 
