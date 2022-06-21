@@ -11,6 +11,10 @@ const bodyContext = require.context(
   /\.png$/
 );
 
+export function isValidBody(ordinal: number) {
+  return ordinal >= 1 && ordinal <= 4;
+}
+
 export function requireBody(ordinal: number, direction: DuplicantDirection) {
   let frame;
   switch (direction) {

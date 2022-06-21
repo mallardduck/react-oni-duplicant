@@ -11,6 +11,10 @@ const hairContext = require.context(
   /\.png$/
 );
 
+export function isValidHead(ordinal: number) {
+  return ordinal >= 1 && ordinal <= 4;
+}
+
 export function requireHead(ordinal: number, direction: DuplicantDirection) {
   let frame;
   switch (direction) {
